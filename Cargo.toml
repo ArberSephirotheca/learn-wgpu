@@ -2,5 +2,6 @@
 
 members = [
     "lesson2-pipeline",
-	"lesson3-buffer"
+	"lesson3-buffer",
+    "lesson4-texture",
 ]
