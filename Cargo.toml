@@ -1,5 +1,6 @@
 [workspace]
 
 members = [
-    "pipeline",
+    "lesson2-pipeline",
+	"lesson3-buffer"
 ]

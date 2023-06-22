@@ -18,8 +18,6 @@ struct State {
     window: Window,
     color : wgpu::Color,
     render_pipeline: wgpu::RenderPipeline,
-   // challenge_pipeline : wgpu::RenderPipeline,
-    challenge_color : bool,
 }
 
 impl State {
@@ -186,8 +184,6 @@ impl State {
             window,
             color,
             render_pipeline,
-           // challenge_pipeline,
-            challenge_color: false,
         }
     }
 
@@ -219,7 +215,6 @@ impl State {
                 true
             }
             WindowEvent::KeyboardInput { device_id, input: KeyboardInput{ virtual_keycode: Some(VirtualKeyCode::Space), ..}, is_synthetic } =>{
-                    self.challenge_color = true;
                      self.color = wgpu::Color{
                           r: 0.3,
                           g: 0.3,
@@ -259,11 +254,7 @@ impl State {
                 })],
                 depth_stencil_attachment: None,
             });
-            if self.challenge_color == true{
                 render_pass.set_pipeline(&self.render_pipeline);
-            }else{
-                render_pass.set_pipeline(&self.render_pipeline);
-            }
             render_pass.draw(0..3, 0..1);
 }
 
