@@ -4,4 +4,5 @@ members = [
     "lesson2-pipeline",
 	"lesson3-buffer",
     "lesson4-texture",
+    "lesson5-camera",
 ]
